@@ -11,10 +11,20 @@ server.use(function (req, res, next) {
   console.log(new Date(), req.url);
   next();
 });
-server.use(express.static(procressDir));
 
 
-server.listen(5000, function () {
-  console.log('static server is listening at port http://localhost:5000');
-  console.log('static dir is ' + procressDir);
-});
+exports = module.exports = server;
+
+var startServer = function (port, dir) {
+  dir = dir || procressDir;
+  port = port !== void 0 ? port : 5000;
+
+  server.use(express.static(dir));
+
+  server.listen(port, function () {
+    console.log('static server is listening at port http://localhost:' + port);
+    console.log('static dir is ' + dir);
+  });
+};
+
+exports.startServer = startServer;
