@@ -6,6 +6,8 @@
 
 ## usage
 
+** ONLY FOR DEVELOP **
+
 assume you have a static file dir : `/home/alsotang/d3js`
 
 ```bash
