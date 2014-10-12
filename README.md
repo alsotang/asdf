@@ -6,7 +6,7 @@
 
 ## usage
 
-** ONLY FOR DEVELOP **
+** ONLY FOR DEVELOPMENT **
 
 assume you have a static file dir : `/home/alsotang/d3js`
 
