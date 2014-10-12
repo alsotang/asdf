@@ -12,4 +12,4 @@ program
 
 var server = require('../');
 
-server.startServer(Number(program.port), program.dir);
+server.startServer(program.port, program.dir);

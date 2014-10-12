@@ -1,5 +1,6 @@
 var express = require('express');
 var server = express();
+var path = require('path');
 
 var procressDir = process.cwd();
 
@@ -16,8 +17,8 @@ server.use(function (req, res, next) {
 exports = module.exports = server;
 
 var startServer = function (port, dir) {
-  dir = dir || procressDir;
-  port = port !== void 0 ? port : 5000;
+  dir = dir ? path.resolve(procressDir, dir) : procressDir;
+  port = Number(port || 5000);
 
   server.use(express.static(dir));
 
