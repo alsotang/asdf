@@ -1,0 +1,32 @@
+{
+  "name": "adsf",
+  "version": "1.0.1",
+  "description": "tiny static web server that you can launch instantly in any directory (inspired by https://github.com/ddfreyne/adsf/) ",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alsotang/asdf.git"
+  },
+  "keywords": [
+    "static",
+    "web",
+    "server"
+  ],
+  "author": "alsotang <alsotang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alsotang/asdf/issues"
+  },
+  "homepage": "https://github.com/alsotang/asdf",
+  "devDependencies": {
+    "mocha": "^1.21.5",
+    "should": "^4.0.4",
+    "supertest": "^0.14.0"
+  },
+  "bin": {
+    "asdf": "./bin/asdf"
+  },
+}
