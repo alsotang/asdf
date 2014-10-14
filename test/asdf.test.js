@@ -32,7 +32,7 @@ describe('test/adsf/test.js', function () {
   });
 
   it('should work with -d', function (done) {
-    asdfProcess = childProcess.exec(ASDF_BIN_PATH + ' -d ' + path.join(__dirname, '../test'));
+    asdfProcess = childProcess.exec(ASDF_BIN_PATH + ' -d test');
     setTimeout(function () {
       superagent.get('http://localhost:5000')
         .end(function (err, res) {
