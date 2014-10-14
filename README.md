@@ -1,7 +1,6 @@
 ## A tiny static web server
 
-[![Build Status](https://travis-ci.org/alsotang/asdf.svg?branch=master)](https://travis-ci.org/alsotang/asdf)  [![Coverage Status](https://img.shields.io/coveralls/alsotang/asdf.svg)](https://coveralls.io/r/alsotang/asdf)
-
+[![Build Status](https://travis-ci.org/alsotang/asdf.svg?branch=master)](https://travis-ci.org/alsotang/asdf)
 ## install
 
 `$ npm i -g asdf`
