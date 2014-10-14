@@ -28,7 +28,7 @@ describe('test/adsf/test.js', function () {
           res.status.should.equal(404);
           done();
         });
-    }, 300);
+    }, 500);
   });
 
   it('should work with -p and -d', function (done) {
@@ -41,6 +41,6 @@ describe('test/adsf/test.js', function () {
           res.text.should.equal('hello world\n');
           done();
         });
-    }, 300);
+    }, 500);
   });
 });
