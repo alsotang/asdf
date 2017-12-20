@@ -1,27 +1,27 @@
-var should = require('should');
-var superagent = require('superagent');
-var childProcess = require('child_process');
-var path = require('path');
-var asdf = require('..');
+const should = require('should');
+const superagent = require('superagent');
+const childProcess = require('child_process');
+const path = require('path');
+const asdf = require('../');
 
-var ASDF_BIN_PATH = path.join(__dirname, '../bin/asdf');
+const ASDF_BIN_PATH = path.join(__dirname, '../bin/asdf');
 
-describe('test/adsf/test.js', function () {
-  var asdfProcess;
+describe('test/adsf/test.js', () => {
+  const asdfProcess;
 
-  afterEach(function () {
+  afterEach(() => {
     if (asdfProcess) {
       asdfProcess.kill();
     }
   });
 
-  it('should be ok', function () {
+  it('should be ok', () => {
     'ok'.should.be.ok;
   });
 
-  it('should 404 when no index.html in dir', function (done) {
+  it('should 404 when no index.html in dir', (done) => {
     asdfProcess = childProcess.exec(ASDF_BIN_PATH);
-    setTimeout(function () {
+    setTimeout(() => {
       superagent.get('http://localhost:5000')
         .end(function (err, res) {
           should.not.exists(err);
@@ -31,11 +31,11 @@ describe('test/adsf/test.js', function () {
     }, 500);
   });
 
-  it('should work with -p and -d', function (done) {
+  it('should work with -p and -d', (done) => {
     asdfProcess = childProcess.exec(ASDF_BIN_PATH + ' -d test -p 3000');
-    setTimeout(function () {
+    setTimeout(() => {
       superagent.get('http://localhost:3000')
-        .end(function (err, res) {
+        .end((err, res) => {
           should.not.exists(err);
           res.status.should.equal(200);
           res.text.should.equal('hello world\n');

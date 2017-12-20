@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-var packagejson = require('../package.json');
-
-var program = require('commander');
+const packagejson = require('../package.json');
+const program = require('commander');
 
 program
   .version(packagejson.version)
   .option('-p, --port <port>', 'which port to use, default is 5000')
-  .option('-d, --dir <dir>', 'which dir to serve, default is which dir you call `adsf`')
+  .option('-H, --host <host>', 'which address to listen on, default is 127.0.0.1')
+  .option('-d, --dir <dir>', 'which dir to serve, default is which dir you call `asdf`')
   .parse(process.argv);
 
-var server = require('../');
+const server = require('../');
 
-server.startServer(program.port, program.dir);
+server.startServer(program.port, program.dir, program.host);
