@@ -1,11 +1,13 @@
 ## A tiny static web server
 
 [![Build Status](https://travis-ci.org/alsotang/asdf.svg?branch=master)](https://travis-ci.org/alsotang/asdf)
-## install
+## Install
 
-`$ npm i -g asdf`
+`$ npm i -g asdf` 
+or
+`$ yarn global add asdf`
 
-## usage
+## Usage
 
 ** ONLY FOR DEVELOPMENT **
 
@@ -14,11 +16,10 @@ assume you have a static file dir : `/home/alsotang/d3js`
 ```bash
 $ cd /home/alsotang/d3js
 $ asdf
-static server is listening at port http://localhost:5000
-static dir is /home/alsotang/d3js
+Listening on http://127.0.0.1:5000 (directory: /home/alsotang/d3js)
 ```
 
-then you can visit `http://localhost:5000/index.html` from browser.
+then you can visit `http://127.0.0.1:5000` from browser.
 
 ```bash
   Usage: asdf [options]
@@ -28,9 +29,10 @@ then you can visit `http://localhost:5000/index.html` from browser.
     -h, --help         output usage information
     -V, --version      output the version number
     -p, --port <port>  which port to use, default is 5000
-    -d, --dir <dir>    which dir to serve, default is which dir you call `adsf`
+    -H, --host <host>  which address to listen on, default is 127.0.0.1
+    -d, --dir <dir>    which dir to serve, default is dir where you call `adsf`
 ```
 
-## license
+## License
 
 MIT

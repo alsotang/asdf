@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "commander": "^2.3.0",
+    "dateformat": "^3.0.2",
     "express": "^4.9.7"
   }
 }
