@@ -7,7 +7,7 @@ const asdf = require('../');
 const ASDF_BIN_PATH = path.join(__dirname, '../bin/asdf');
 
 describe('test/adsf/test.js', () => {
-  const asdfProcess;
+  let asdfProcess;
 
   afterEach(() => {
     if (asdfProcess) {
