@@ -10,6 +10,11 @@ server.use((req, res, next) => {
   next();
 });
 
+server.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*')
+  next();
+})
+
 server.get('/', (req, res) => {
   res.sendFile(server.locals.dir + '/index.html');
 });
