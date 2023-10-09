@@ -1,11 +1,8 @@
 ## A tiny static web server
 
-[![Build Status](https://travis-ci.org/alsotang/asdf.svg?branch=master)](https://travis-ci.org/alsotang/asdf)
 ## Install
 
-`$ npm i -g asdf` 
-or
-`$ yarn global add asdf`
+`$ npm i -g asdf`
 
 ## Usage
 
